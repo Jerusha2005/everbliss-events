@@ -9,6 +9,49 @@
   };
   const saveBookings = bookings => localStorage.setItem("everblissBookings", JSON.stringify(bookings));
   const getParam = name => new URLSearchParams(window.location.search).get(name);
+  const AUTH_KEY = "everblissLoggedInEmail";
+  const isSignedIn = () => Boolean(sessionStorage.getItem(AUTH_KEY));
+
+  // Protect the booking page, including direct URL visits.
+  // Preserve event/package query parameters when sending the visitor to sign in.
+  if (document.getElementById("bookingForm") && !isSignedIn()) {
+    const requestedPage = "booking.html" + window.location.search;
+    window.location.replace("login.html?next=" + encodeURIComponent(requestedPage));
+    return;
+  }
+
+  // If a visitor clicks any booking link before signing in, send them to Sign In first.
+  document.querySelectorAll('a[href*="booking.html"]').forEach(link => {
+    link.addEventListener("click", function (event) {
+      if (isSignedIn()) return;
+      const target = link.getAttribute("href");
+      event.preventDefault();
+      window.location.href = "login.html?next=" + encodeURIComponent(target);
+    });
+  });
+
+  // Only allow a local booking page as a post-authentication destination.
+  function getAuthDestination() {
+    const requested = getParam("next") || "";
+    if (/^booking\.html(?:\?.*)?$/.test(requested)) return requested;
+    return "index.html";
+  }
+
+  // Preserve the intended booking destination when switching between Sign In and Create Account.
+  const nextDestination = getParam("next");
+  if (/^booking\.html(?:\?.*)?$/.test(nextDestination || "")) {
+    const registerLink = document.querySelector('a[href="register.html"]');
+    const signInLink = document.querySelector('a[href="login.html"]');
+    if (registerLink) registerLink.href = "register.html?next=" + encodeURIComponent(nextDestination);
+    if (signInLink) signInLink.href = "login.html?next=" + encodeURIComponent(nextDestination);
+
+    const loginStatusNotice = document.getElementById("loginStatus");
+    const registerStatusNotice = document.getElementById("registerStatus");
+    if (loginStatusNotice) loginStatusNotice.innerHTML =
+      '<div class="alert-demo mb-3">Please sign in or create an account before booking an event.</div>';
+    if (registerStatusNotice) registerStatusNotice.innerHTML =
+      '<div class="alert-demo mb-3">Create your account to continue to your event booking.</div>';
+  }
 
   // Set the earliest booking date to today.
   const dateInput = document.getElementById("eventDate");
@@ -204,15 +247,18 @@
       users.push({ name, email, password });
       saveUsers(users);
 
+      // Creating an account signs the visitor in for this browser tab.
+      sessionStorage.setItem(AUTH_KEY, email);
+
       status.innerHTML =
-        '<div class="alert-demo mb-3">Account created successfully! Redirecting to home page...</div>';
+        '<div class="alert-demo mb-3">Account created successfully! Opening your booking...</div>';
 
       registerForm.reset();
       registerForm.classList.remove("was-validated");
 
       window.setTimeout(function () {
-        window.location.href = "index.html";
-      }, 1200);
+        window.location.href = getAuthDestination();
+      }, 900);
     });
 
     // Recheck password validity when the user edits the confirmation field.
@@ -292,14 +338,14 @@ if (!user) {
   return;
 }
 
-sessionStorage.setItem("everblissLoggedInEmail", user.email);
+sessionStorage.setItem(AUTH_KEY, user.email);
 
 status.innerHTML =
-  '<div class="alert-demo mb-3">Sign-in successful! Opening the home page...</div>';
+  '<div class="alert-demo mb-3">Sign-in successful! Continuing...</div>';
 
 window.setTimeout(function () {
-  window.location.href = "index.html";
-}, 900);
+  window.location.href = getAuthDestination();
+}, 700);
     });
   }
 
