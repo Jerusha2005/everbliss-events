@@ -1,2 +1,0 @@
-# everbliss-events
-UIUX Project 
