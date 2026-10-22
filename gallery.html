@@ -1,186 +1,215 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gallery | Everbliss Events</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery | Everbliss Events</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top site-nav">
-            <div class="container">
-                <a class="navbar-brand brand" href="index.html">everbliss<span>events</span></a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top site-nav">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html">everbliss<span>events</span></a>
 
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="packages.html">Packages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Sign In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-brand btn-sm ms-lg-2" href="booking.html">Book an Event</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-brand btn-sm ms-lg-2" href="booking.html">Book an Event</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main>
-            <section class="page-hero">
-                <div class="container">
-                    <p class="eyebrow">A LITTLE INSPIRATION</p>
-                    <h1>Ideas to make it <em>unforgettable</em></h1>
-                    <p>Explore a few styles and save the inspiration for your own celebration.</p>
-                </div>
-            </section>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">A LITTLE INSPIRATION</p>
+                <h1>Ideas to make it <em>unforgettable</em></h1>
+                <p>Explore a few styles and save the inspiration for your own celebration.</p>
+            </div>
+        </section>
 
-            <section class="section-pad">
-                <div class="container">
-                    <div class="row g-3 gallery-grid">
-                        <div class="col-6 col-lg-4">
+        <section class="section-pad">
+            <div class="container">
+                <div class="row g-3 gallery-grid">
+
+                    <!-- Card 1: Birthday Moments -->
+                    <div class="col-6 col-lg-4">
+                        <a href="birthday gallery.html" class="gallery-card-link">
                             <figure>
-                                <img src="images/birthday.jpeg" alt="Birthday cake and celebration">
-                                <figcaption>Birthday moments</figcaption>
+                                <img src="images/birthdays.jpg" alt="Birthday cake and celebration">
+                                <figcaption>Birthday Moments <i class="bi bi-arrow-up-right"></i></figcaption>
                             </figure>
-                        </div>
+                        </a>
+                    </div>
 
-                        <div class="col-6 col-lg-4">
+                    <!-- Card 2: Wedding Whispers -->
+                    <div class="col-6 col-lg-4">
+                        <a href="wedding gallery.html" class="gallery-card-link">
                             <figure>
                                 <img src="images/florals.jpg" alt="Wedding flowers">
-                                <figcaption>Romantic florals</figcaption>
+                                <figcaption>Wedding Whispers<i class="bi bi-arrow-up-right"></i></figcaption>
                             </figure>
-                        </div>
-
-                        <div class="col-6 col-lg-4">
-                            <figure>
-                                <img src="images/anniverse.jpg" alt="Party decorations">
-                                <figcaption>Party colour stories</figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="col-6 col-lg-4">
-                            <figure>
-                                <img src="images/wedding.jpeg" alt="Elegant table setting">
-                                <figcaption>Elegant table styling</figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="col-6 col-lg-4">
-                            <figure>
-                                <img src="images/home.jpg" alt="Warm celebration venue">
-                                <figcaption>Warm gatherings</figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="col-6 col-lg-4">
-                            <figure>
-                                <img src="images/treats.jpg" alt="Treats table">
-                                <figcaption>Treats and sweet details</figcaption>
-                            </figure>
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <a class="btn btn-brand" href="booking.html">Create your own setup ↗</a>
+                    <!-- Card 3: Timeless Together -->
+                    <div class="col-6 col-lg-4">
+                        <a href="anniversary gallery.html" class="gallery-card-link">
+                            <figure>
+                                <img src="images/anniverse.jpg" alt="Party decorations">
+                                <figcaption>Journey of Years<i class="bi bi-arrow-up-right"></i></figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: Beyond Business -->
+                    <div class="col-6 col-lg-4">
+                        <a href="business gallery.html" class="gallery-card-link">
+                            <figure>
+                                <img src="images/corporate.jpeg" alt="Elegant table setting">
+                                <figcaption>Beyond Business<i class="bi bi-arrow-up-right"></i></figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- Card 5: Festive Vibes -->
+                    <div class="col-6 col-lg-4">
+                        <a href="festive gallery.html" class="gallery-card-link">
+                            <figure>
+                                <img src="images/festival.jpeg" alt="Warm celebration venue">
+                                <figcaption>Lights & Celebrations<i class="bi bi-arrow-up-right"></i></figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- Card 6: Little Joys & Gatherings -->
+                    <div class="col-6 col-lg-4">
+                        <a href="show gallery.html" class="gallery-card-link">
+                            <figure>
+                                <img src="images/fashion.jpg" alt="Treats table">
+                                <figcaption>Runway Elegance<i class="bi bi-arrow-up-right"></i></figcaption>
+                            </figure>
+                        </a>
                     </div>
 
                 </div>
-            </section>
-        </main>
 
-        <footer class="site-footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-4">
+                <div class="text-center mt-5">
+                    <a class="btn btn-brand" href="booking.html">Create your own setup ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <!-- Brand -->
-        <div>
-            <a class="brand" href="index.html">
-                everbliss<span>events</span>
-            </a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
 
-            <p class="mt-2">
-                Thoughtful details for unforgettable moments.
-            </p>
+                <!-- Brand -->
+                <div class="footer-brand-column">
+                    <a href="index.html" class="footer-brand">
+                        everbliss<span> events</span>
+                    </a>
+
+                    <p class="footer-description">
+                        Thoughtfully planned events, beautifully crafted
+                        memories.
+                    </p>
+
+                    <p class="footer-tagline">
+                        Make every Everbliss moment unforgettable. 💗
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-quick-links">
+                    <h5 class="footer-heading">Quick Links</h5>
+
+                    <div class="footer-links-grid">
+                        <div class="footer-link-column">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+                            <a href="services.html">Services</a>
+                            <a href="packages.html">Packages</a>
+                            <a href="gallery.html">Gallery</a>
+                        </div>
+
+                        <div class="footer-link-column">
+                            <a href="booking.html">Book an Event</a>
+                            <a href="my-bookings.html">My Bookings</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="login.html">Sign In</a>
+                            <a href="register.html">Create Account</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-contact-column">
+                    <h5 class="footer-heading">Follow Us On</h5>
+
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="https://x.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Everbliss Events. All rights reserved.</p>
+            </div>
         </div>
+    </footer>
 
-        <!-- Quick Links -->
-        <div>
-            <strong>Quick Links</strong>
-
-            <p class="mt-2 mb-0">
-                <a href="contact.html">Contact Us</a> <br>
-                <a href="my-bookings.html">My Bookings</a> <br> 
-                <a href="index.html">Home</a> <br>
-                <a href="services.html">Services</a> <br>
-                <a href="packages.html">Packages</a> <br>
-                <a href="gallery.html">Gallery</a> <br>
-                <a href="about.html">About</a> <br>
-                <a href="login.html">Sign-in</a> <br>
-                <a href="register.html">Create Account</a> <br>
-            </p>
-        </div>
-
-        
-<!-- Social Media -->
-<div>
-    <strong>Follow Us</strong>
-
-    <div class="d-flex flex-column gap-2 mt-2">
-        <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Instagram ↗
-        </a>
-
-        <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Facebook ↗
-        </a>
-
-        <a
-            href="https://x.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            X (Twitter) ↗
-        </a>
-    </div>
-</div>
-
-    </div>
-
-    <div class="container footer-bottom">
-       <p> © 2026 Everbliss Events </p>
-    </div>
-</footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
