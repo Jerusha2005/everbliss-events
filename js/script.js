@@ -94,10 +94,10 @@
   }
   if (packageSelect && packageParam) {
     const map = {
-      "Sweet & Simple": "4999",
-      "The Everbliss Edit": "9999",
-      "Treats & Toasts": "2499"
-    };
+      "Sweet & Simple": "2999",
+      "The Everbliss Edit": "5000",
+      "Everbliss Luxe": "20000"
+  };
     if (map[packageParam]) packageSelect.value = map[packageParam];
     updateEstimate();
   }
