@@ -769,6 +769,61 @@ textarea.form-control {
 }
 
 
+/* Continuous Home Page Image Slider */
+.home-carousel-section {
+    padding: 35px 0;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.continuous-gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.continuous-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: continuousSlide 30s linear infinite;
+}
+
+.continuous-track img {
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Move the images continuously */
+@keyframes continuousSlide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .continuous-track img {
+        width: 230px;
+        height: 180px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .continuous-track {
+        animation: none;
+    }
+}
+
 
 /* Cover images */
 .cover-image {
